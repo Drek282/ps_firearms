@@ -1,0 +1,237 @@
+<?xml version="1.0" ?>
+<maps>
+ <map name='obj_armory' gametype='halflife' modtype='firearms'>
+  <minx>-3705</minx>
+  <miny>-1690</miny>
+  <maxx>2545</maxx>
+  <maxy>3840</maxy>
+  <res>600x536</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='obj_bocage' gametype='halflife' modtype='firearms'>
+  <minx>-3325</minx>
+  <miny>-3900</miny>
+  <maxx>3855</maxx>
+  <maxy>3900</maxy>
+  <res>549x600</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='obj_paradise' gametype='halflife' modtype='firearms'>
+  <minx>-3590</minx>
+  <miny>-3200</miny>
+  <maxx>3825</maxx>
+  <maxy>3960</maxy>
+  <res>600x580</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='obj_sweden' gametype='halflife' modtype='firearms'>
+  <minx>-4040</minx>
+  <miny>-1285</miny>
+  <maxx>3600</maxx>
+  <maxy>3560</maxy>
+  <res>600x378</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='obj_thanatos' gametype='halflife' modtype='firearms'>
+  <minx>-3885</minx>
+  <miny>-3860</miny>
+  <maxx>3445</maxx>
+  <maxy>3705</maxy>
+  <res>591x600</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='obj_vengeance' gametype='halflife' modtype='firearms'>
+  <minx>-3500</minx>
+  <miny>-3925</miny>
+  <maxx>3115</maxx>
+  <maxy>3985</maxy>
+  <res>503x600</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='obj_willow' gametype='halflife' modtype='firearms'>
+  <minx>-2940</minx>
+  <miny>-3465</miny>
+  <maxx>3970</maxx>
+  <maxy>2215</maxy>
+  <res>600x491</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='ps_bridge' gametype='halflife' modtype='firearms'>
+  <minx>-3330</minx>
+  <miny>-3280</miny>
+  <maxx>1630</maxx>
+  <maxy>3230</maxy>
+  <res>457x600</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='ps_coldwar' gametype='halflife' modtype='firearms'>
+  <minx>-4040</minx>
+  <miny>-4015</miny>
+  <maxx>2660</maxx>
+  <maxy>3550</maxy>
+  <res>529x600</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='ps_crash' gametype='halflife' modtype='firearms'>
+  <minx>-2400</minx>
+  <miny>-3705</miny>
+  <maxx>3700</maxx>
+  <maxy>3045</maxy>
+  <res>600x542</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='ps_marie' gametype='halflife' modtype='firearms'>
+  <minx>-4035</minx>
+  <miny>-3965</miny>
+  <maxx>3985</maxx>
+  <maxy>2015</maxy>
+  <res>600x450</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='ps_river' gametype='halflife' modtype='firearms'>
+  <minx>-3895</minx>
+  <miny>-3895</miny>
+  <maxx>1590</maxx>
+  <maxy>3970</maxy>
+  <res>600x420</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='ps_splinter' gametype='halflife' modtype='firearms'>
+  <minx>-3725</minx>
+  <miny>-2720</miny>
+  <maxx>3830</maxx>
+  <maxy>3035</maxy>
+  <res>600x454</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='ps_storm_r1' gametype='halflife' modtype='firearms'>
+  <minx>-3950</minx>
+  <miny>-1895</miny>
+  <maxx>4000</maxx>
+  <maxy>1890</maxy>
+  <res>600x290</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='ps_upham' gametype='halflife' modtype='firearms'>
+  <minx>-930</minx>
+  <miny>-3930</miny>
+  <maxx>3890</maxx>
+  <maxy>3705</maxy>
+  <res>600x379</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='sd_durandal' gametype='halflife' modtype='firearms'>
+  <minx>-2820</minx>
+  <miny>-3965</miny>
+  <maxx>3980</maxx>
+  <maxy>1255</maxy>
+  <res>600x459</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='sd_force' gametype='halflife' modtype='firearms'>
+  <minx>-3555</minx>
+  <miny>-3575</miny>
+  <maxx>3450</maxx>
+  <maxy>2425</maxy>
+  <res>600x513</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='sd_oberland' gametype='halflife' modtype='firearms'>
+  <minx>-2425</minx>
+  <miny>-3880</miny>
+  <maxx>3245</maxx>
+  <maxy>3335</maxy>
+  <res>466x600</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='sdtc_balcome' gametype='halflife' modtype='firearms'>
+  <minx>-1395</minx>
+  <miny>-3710</miny>
+  <maxx>2560</maxx>
+  <maxy>3775</maxy>
+  <res>600x319</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='tc_basrah' gametype='halflife' modtype='firearms'>
+  <minx>-2865</minx>
+  <miny>-2290</miny>
+  <maxx>3305</maxx>
+  <maxy>2270</maxy>
+  <res>600x444</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='tc_caen' gametype='halflife' modtype='firearms'>
+  <minx>-3070</minx>
+  <miny>-3805</miny>
+  <maxx>2555</maxx>
+  <maxy>3960</maxy>
+  <res>600x435</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='tc_golan' gametype='halflife' modtype='firearms'>
+  <minx>-3520</minx>
+  <miny>-3925</miny>
+  <maxx>3940</maxx>
+  <maxy>3705</maxy>
+  <res>600x585</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='tc_iwojima' gametype='halflife' modtype='firearms'>
+  <minx>-3180</minx>
+  <miny>-1140</miny>
+  <maxx>1975</maxx>
+  <maxy>1705</maxy>
+  <res>600x326</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='tc_okinawa_b4' gametype='halflife' modtype='firearms'>
+  <minx>-1915</minx>
+  <miny>-3960</miny>
+  <maxx>1735</maxx>
+  <maxy>4000</maxy>
+  <res>600x275</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='tc_rubble' gametype='halflife' modtype='firearms'>
+  <minx>-1070</minx>
+  <miny>-890</miny>
+  <maxx>2560</maxx>
+  <maxy>1655</maxy>
+  <res>600x428</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='tc_thebes' gametype='halflife' modtype='firearms'>
+  <minx>-3935</minx>
+  <miny>-3505</miny>
+  <maxx>3885</maxx>
+  <maxy>3430</maxy>
+  <res>600x532</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+</maps>
