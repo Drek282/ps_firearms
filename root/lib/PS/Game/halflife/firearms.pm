@@ -127,7 +127,7 @@ sub event_kill {
 # This isn't working properly.
 sub event_firearms_ffkill {
 	my ($self, $timestamp, $args) = @_;
-	my ($killer, $victim, $propstr) = @$args;
+	my ($killer, $victim) = @$args;
 	my $p1 = $self->get_plr($killer) || return;
 	my $p2 = $self->get_plr($victim) || return;
 	$self->_do_connected($timestamp, $p1) unless $p1->{_connected};
@@ -139,33 +139,32 @@ sub event_firearms_ffkill {
 	return if $self->isbanned($p1) or $self->isbanned($p2);
 
 	my $m = $self->get_map;
-	my $props = $self->parseprops($propstr);
 
 	# I directly access the player variables in the objects (bad OO design), 
 	# but the speed advantage is too great to do it the "proper" way.
 
-#	$p1->update_streak('kills', 'deaths');
-#	$p1->{basic}{kills}++;
-#	$p1->{mod}{ $p1->{team} . "kills"}++ if $p1->{team};		# Kills while ON the team
+	$p1->update_streak('kills', 'deaths');
+	$p1->{basic}{kills}++;
+	$p1->{mod}{ $p1->{team} . "kills"}++ if $p1->{team};		# Kills while ON the team
 #	$p1->{mod}{ $p2->{team} . "kills"}++;				# Kills against the team
-#	$p1->{mod_maps}{ $m->{mapid} }{ $p1->{team} . "kills"}++ if $p1->{team};
-#	$p1->{maps}{ $m->{mapid} }{kills}++;
-#	$p1->{victims}{ $p2->{plrid} }{kills}++;
+	$p1->{mod_maps}{ $m->{mapid} }{ $p1->{team} . "kills"}++ if $p1->{team};
+	$p1->{maps}{ $m->{mapid} }{kills}++;
+	$p1->{victims}{ $p2->{plrid} }{kills}++;
 
 	$p2->{isdead} = 1;
-#	$p2->update_streak('deaths', 'kills');
-#	$p2->{basic}{deaths}++;
-#	$p2->{mod}{ $p2->{team} . "deaths"}++ if $p2->{team};		# Deaths while ON the team
+	$p2->update_streak('deaths', 'kills');
+	$p2->{basic}{deaths}++;
+	$p2->{mod}{ $p2->{team} . "deaths"}++ if $p2->{team};		# Deaths while ON the team
 #	$p2->{mod}{ $p1->{team} . "deaths"}++;				# Deaths against the team
-#	$p2->{mod_maps}{ $m->{mapid} }{ $p2->{team} . "deaths"}++ if $p2->{team};
-#   $p2->{maps}{ $m->{mapid} }{deaths}++;
-#	$p2->{victims}{ $p1->{plrid} }{deaths}++;
+	$p2->{mod_maps}{ $m->{mapid} }{ $p2->{team} . "deaths"}++ if $p2->{team};
+    $p2->{maps}{ $m->{mapid} }{deaths}++;
+	$p2->{victims}{ $p1->{plrid} }{deaths}++;
 #	$p2->{roundtime} = $self->{roundstart} ? $timestamp - $self->{roundstart} : undef;
 
 	$m->{basic}{lasttime} = $timestamp;
-#	$m->{basic}{kills}++;
-#	$m->{mod}{ $p1->{team} . 'kills'}++ if $p1->{team};		# kills on the team
-#	$m->hourly('kills', $timestamp);
+	$m->{basic}{kills}++;
+	$m->{mod}{ $p1->{team} . 'kills'}++ if $p1->{team};		# kills on the team
+	$m->hourly('kills', $timestamp);
     
 	if (($p1->{team} and $p2->{team}) and ($p1->{team} eq $p2->{team})) {
         $p1->{maps}{ $m->{mapid} }{ffkills}++;

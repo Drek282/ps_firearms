@@ -79,12 +79,13 @@ INSERT INTO `ps_config_events` (`id`, `gametype`, `modtype`, `eventname`, `alias
         (23,'halflife','','ignored2','','/^(?:\\]TSC\\[|Succeeded|FATAL|-|Loaded)/',230,1,''),
         (24,'halflife','','ignored3','','/^(?:Config|Swear|server_)/',240,1,''),
         (25,'halflife','','ignored4','','/^\"[^\"]+\" = \"/',250,1,''),
+        (27,'halflife','firearms','teamtrigger','','/^Team \"([^\"]+)\" triggered \"([^\"]+)\"(.*)/',270,0,''),
         (33,'halflife','','changed_role','','/^\"(.+(?:<[^>]*>))\" changed role to \"([^\"]+)\"/',330,0,''),
         (45,'halflife','','rcon2','','/^rcon from/',130,1,''),
         (48,'halflife','','spatial','','/^\\[KTRAJ\\] \"(.+(?:<[^>]*>))\" killed \"(.+(?:<[^>]*>))\" with \"([^\"]*)\"(.*)/',480,0,''),
         (49,'halflife','','plugin','','/^\\[[^\\]]+\\]/',490,1,''),
         (50,'halflife','','console','','/^(CONSOLE|PLAYER FILTER) :/',500,1,''),
-        (60,'halflife','firearms','firearms_ffkill','','/^TEAMKILL: \"(.+(?:<[^>]*>))\" killed team mate \"(.+(?:<[^>]*>))\"!/',600,0,''),
+        (60,'halflife','firearms','firearms_ffkill','','/^TEAMKILL: \"(.+(?:<[^>]*>))\" killed team mate \"(.+(?:<[^>]*>))\"!$/',600,0,''),
         (100,'halflife','','ignored5','','/^Server name is \"([^"]+)\"/',1000,1,''),
         (101,'halflife','','ignored6','','/^Connection to Steam servers successful./',1010,1,''),
         (102,'halflife','','ignored7','','/^VAC secure mode is activated./',1020,1,''),
@@ -106,10 +107,9 @@ INSERT INTO `ps_config_awards` (`id`, `enabled`, `idx`, `type`, `negative`, `cla
         (9,1,190,'weaponclass',0,'','Most Kills with {$weapon.class} weapons','','{$player.link} has the most {$weapon.class} kills ({$award.value})','{$kills}','desc','',0,'commify',NULL,NULL,1,'Most kills with {$weapon.class} type weapons (including: {$weapon.list}).'),
         (10,1,180,'weapon',0,'','Most Kills with {$weapon.name}','','{$player.link} has the most {$weapon.link} kills ({$award.value})','{$kills}','desc','',0,'commify',NULL,NULL,1,'Most kills with a {$weapon.name}'),
         (13,1,30,'player',0,'','Most Bonus Points','','{$player.link} achieved the most bonus points ({$award.value})','{$totalbonus}','desc','',25,'commify',NULL,NULL,1,'Player that has achieved the most bonus points.'),
-        (22,1,140,'player',0,'','Most Flags Captured','','{$player.link} has captured the most flags ({$award.value})','{$flagscaptured}','desc','',10,'commify','halflife','firearms',1,'Player has captured the most flags.'),
         (23,1,50,'player',1,'','Worst Teammate','','{$player.link} has killed the most teammates ({$award.value})','{$ffkills}','desc','',0,'commify',NULL,NULL,1,'Player with the most friendly fire kills (ie: Worst Teammate)'),
         (25,1,60,'player',1,'','Worst Team Kill Percentage','','{$player.link} has the highest team kill percentage ({$award.value})','{$ffkills} / {$kills} * 100','desc','',0,'%0.02f%%',NULL,NULL,1,'Player with the highest team kill percentage.'),
-        (30,1,300,'player',0,'','Most Map Objectives Completed','','{$player.link} has completed the most map objectives ({$award.value}).','{$capturepoint}','desc','',10,'commify','halflife','firearms|tfc',1,'Player who has completed the most map objectives.'),
+        (30,1,300,'player',0,'','Most Map Objectives Completed','','{$player.link} has completed the most map objectives ({$award.value}).','{$capturepoint}','desc','',10,'commify','halflife','firearms',1,'Player who has completed the most map objectives.'),
         (32,1,320,'player',0,'','Most Active Medic','','{$player.link} is the most active medic with {$award.value} medic actions.','{$bandage} + {$medevac}','desc','',10,'commify','halflife','firearms',1,'Player with the most medic actions.');
 
 INSERT INTO `ps_config_overlays` (`id`, `gametype`, `modtype`, `map`, `minx`, `miny`, `maxx`, `maxy`, `width`, `height`, `flipv`, `fliph`, `rotate`) 
