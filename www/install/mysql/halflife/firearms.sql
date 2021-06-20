@@ -178,3 +178,7 @@ INSERT INTO `ps_weapon` (`weaponid`, `uniqueid`, `name`, `skillweight`, `class`)
         (32, 'ammobox', 'Exploding Ammunition Crate', 3.25, 'World'),
         (33, 'gp25', 'GP-25 Kostyor', 2.70, 'Grenade Launcher'),
         (34, 'm203', 'M203 Grenade Launcher', 2.70, 'Grenade Launcher');
+        
+INSERT INTO `ps_config` (`id`, `conftype`, `section`, `var`, `value`, `label`, `type`, `locked`, `verifycodes`, `options`, `help`) 
+    VALUES 
+        (1,'main',NULL,'meta_keywords','PsychoStats Game Server Player Statistics Firearms Valve','Site HTML Meta Key Words','text',0,'','','These are the HTML meta key words for your PsychoStats.  They are used by search engines to provide search results.');
