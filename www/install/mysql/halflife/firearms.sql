@@ -139,7 +139,8 @@ INSERT INTO `ps_config_overlays` (`id`, `gametype`, `modtype`, `map`, `minx`, `m
         (96, 'halflife', 'firearms', 'tc_iwojima', -3180, -1140, 1975, 1705, 600, 326, 1, 0, 0),
         (97, 'halflife', 'firearms', 'tc_okinawa_b4', -1915, -3960, 1735, 4000, 600, 275, 1, 0, 0),
         (98, 'halflife', 'firearms', 'tc_rubble', -1070, -890, 2560, 1655, 600, 428, 1, 0, 0),
-        (99, 'halflife', 'firearms', 'tc_thebes', -3935, -3505, 3885, 3430, 600, 532, 1, 0, 0);
+        (99, 'halflife', 'firearms', 'tc_thebes', -3935, -3505, 3885, 3430, 600, 532, 1, 0, 0),
+        (100, 'halflife', 'firearms', 'ps_outlands', -1925, -3645, 3330, 2980, 479, 600, 1, 0, 0);
 
 -- QoL.
 INSERT INTO `ps_weapon` (`weaponid`, `uniqueid`, `name`, `skillweight`, `class`) 

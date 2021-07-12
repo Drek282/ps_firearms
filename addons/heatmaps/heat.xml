@@ -99,6 +99,15 @@
   <flipv>1</flipv>
   <fliph>0</fliph>
  </map>
+ <map name='ps_outlands' gametype='halflife' modtype='firearms'>
+  <minx>-1925</minx>
+  <miny>-3645</miny>
+  <maxx>3330</maxx>
+  <maxy>2980</maxy>
+  <res>479x600</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
  <map name='ps_river' gametype='halflife' modtype='firearms'>
   <minx>-3895</minx>
   <miny>-3895</miny>
