@@ -183,7 +183,6 @@ sub event_plrtrigger {
 	my ($self, $timestamp, $args) = @_;
 	my ($plrstr, $trigger, $plrstr2, $propstr) = @$args;
 	my $p1 = $self->get_plr($plrstr) || return;
-	my $p2 = undef;
 	return if $self->isbanned($p1);
 
 	$p1->{basic}{lasttime} = $timestamp;
@@ -205,27 +204,22 @@ sub event_plrtrigger {
 		$self->{ipcache}{$p1->{uid}} = ip2int($props->{address});
 
 	} elsif ($trigger eq 'bandage') {
-		$p1 = $self->get_plr($plrstr);
         @vars1 = ( 'bandage' );
 		$self->plrbonus('medic_heal', 'enactor', $p1);
 
 	} elsif ($trigger eq 'adrenaline') {
-		$p1 = $self->get_plr($plrstr);
         @vars1 = ( 'bandage' );
 		$self->plrbonus('medic_heal', 'enactor', $p1);
 
 	} elsif ($trigger eq 'suture') {
-		$p1 = $self->get_plr($plrstr);
         @vars1 = ( 'bandage' );
 		$self->plrbonus('medic_heal', 'enactor', $p1);
 
 	} elsif ($trigger eq 'splint') {
-		$p1 = $self->get_plr($plrstr);
         @vars1 = ( 'bandage' );
 		$self->plrbonus('medic_heal', 'enactor', $p1);
 
 	} elsif ($trigger eq 'treat concussion') {
-		$p1 = $self->get_plr($plrstr);
         @vars1 = ( 'bandage' );
 		$self->plrbonus('medic_heal', 'enactor', $p1);
 
@@ -233,37 +227,30 @@ sub event_plrtrigger {
 		@vars1 = ( 'medevac' );
 
 	} elsif ($trigger eq 'capturepoint') {
-		$p1 = $self->get_plr($plrstr);
         @vars1 = ( 'capturepoint' );
 		$self->plrbonus('capturepoint', 'enactor', $p1);
 
 	} elsif ($trigger eq 'howitzer ammo') {
-		$p1 = $self->get_plr($plrstr);
         @vars1 = ( 'capturepoint' );
 		$self->plrbonus('capturepoint', 'enactor', $p1);
 
 	} elsif ($trigger eq 'targetting pack') {
-		$p1 = $self->get_plr($plrstr);
         @vars1 = ( 'capturepoint' );
 		$self->plrbonus('capturepoint', 'enactor', $p1);
 
 	} elsif ($trigger eq 'red intelligence') {
-		$p1 = $self->get_plr($plrstr);
         @vars1 = ( 'capturepoint' );
 		$self->plrbonus('capturepoint', 'enactor', $p1);
 
 	} elsif ($trigger eq 'blue intelligence') {
-		$p1 = $self->get_plr($plrstr);
         @vars1 = ( 'capturepoint' );
 		$self->plrbonus('capturepoint', 'enactor', $p1);
 
 	} elsif ($trigger eq 'secret documents') {
-		$p1 = $self->get_plr($plrstr);
         @vars1 = ( 'capturepoint' );
 		$self->plrbonus('capturepoint', 'enactor', $p1);
 
 	} elsif ($trigger eq 'destroyobject') {
-		$p1 = $self->get_plr($plrstr);
         @vars1 = ( 'capturepoint' );
 		$self->plrbonus('capturepoint', 'enactor', $p1);
 		
@@ -296,14 +283,6 @@ sub event_plrtrigger {
 		$p1->{mod_maps}{ $m->{mapid} }{$var} += $value1;
 		$p1->{mod}{$var} += $value1;
 		$m->{mod}{$var} += $value1;
-	}
-
-	if (ref $p2) {
-		foreach my $var (@vars2) {
-			$p2->{mod_maps}{ $m->{mapid} }{$var} += $value2;
-			$p2->{mod}{$var} += $value2;
-			# don't bump global map stats here; do it for $p1 above
-		}
 	}
 }
 
